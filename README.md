@@ -8,7 +8,8 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 
 ## Getting Started
 
-- Install dependencies using the `npm install` command.
+1. Install dependencies using the `npm install` command.
+2. Copy URL to the Tweetr app into the file `.env.example` and change the file name to `.env`.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
@@ -21,3 +22,4 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 - MD5
 - Moment
 - MongoDB
+- Dotenv

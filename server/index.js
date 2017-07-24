@@ -1,6 +1,7 @@
 "use strict";
 
 // Basic express setup:
+require('dotenv').config();
 
 const PORT          = 8080;
 const express       = require("express");
@@ -12,7 +13,7 @@ app.use(express.static("public"));
 
 
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
@@ -21,12 +22,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
     console.log(`Connected to mongodb: ${MONGODB_URI}`);
-
-
-    // db.collection("tweets").find({}).toArray((err, resp) => {
-
-    //   console.log(resp)
-    // })
 
   // The in-memory database of tweets. It's a basic object with an array in it.
   // const db = require("./lib/in-memory-db");

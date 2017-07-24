@@ -1,0 +1,4 @@
+- clientside cookie keep track of items/itemid
+- on placing order, send all the items to server
+- create a new order and keep the id
+- loop thru all the items and create new item rows in table and use the order id above for order_id col
